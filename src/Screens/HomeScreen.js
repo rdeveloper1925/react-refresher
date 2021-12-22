@@ -160,10 +160,13 @@ const FormikContent = () => (
 //Content: Context content
 const ContextContent = () => (
   <>
-    <p>
+    <p style={{ font: "victor mono italic" }}>
       With the use of context (which i personally currently prefer to redux) i
       can have controlled access to centrallized state and data sharing between
-      props without having to use props.
+      props without having to use props. Trick is to create some state and then
+      pass the state and its setter value as the initioal values of the context
+      provider wrapping. From there, you can call both state and state setter
+      from child components without prop dirlling. Now aint that neat!!
       <br />
       <br />
       <Button variant="success">
