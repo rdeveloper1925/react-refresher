@@ -4,18 +4,17 @@ import HomeScreen from './Screens/HomeScreen';
 import AboutScreen from './Screens/AboutScreen';
 import ContactScreen from './Screens/ContactScreen';
 import CNav from './Components/Nav';
-import {Routes, Route, Outlet, useNavigate, Switch, Link} from 'react-router-dom'
+import {Routes, Route, Outlet, useNavigate, Link} from 'react-router-dom'
 import CardScreen from './Screens/CardScreen';
 import SearcherScreen from './Screens/SearcherScreen';
 import FakeProfileScreen from './Screens/FakeProfileScreen';
 import TodoScreen from './Screens/TodoScreen';
+import ContextScreen from './Screens/ContextScreen';
 
 
 function App() {
   
-
   return (
-    
     <Col md='12' xs='12'>
       <CNav/>
       <Routes>
@@ -26,6 +25,7 @@ function App() {
           <Route path="/fake-profile" exact element={<FakeProfileScreen/>} />
           <Route path="/todo" exact element={<TodoScreen/>} />
           <Route path="/card/:user" exact element={<CardScreen/>} />
+          <Route path="/context" exact element={<ContextScreen/>} />
           <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Outlet/>
@@ -46,13 +46,4 @@ const PageNotFound=(props)=>{
   )
 }
 
-/*
-<Profile/>
-      {
-        data.map(profile=>
-          <Comment image={profile.image} name={profile.name} time={profile.time} comment={profile.comment}/>
-        )
-      }
-
-      */
 export default App;

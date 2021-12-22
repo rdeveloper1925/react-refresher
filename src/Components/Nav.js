@@ -16,7 +16,7 @@ const CNav=props=>{
                         <NavDropdown.Item><NavLink style={navStyle} to="/fake-profile">Fake Profile api</NavLink></NavDropdown.Item>
                         <NavDropdown.Item><NavLink style={navStyle} to="/todo">Todo App</NavLink></NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item><NavLink style={navStyle} to="/">Home</NavLink></NavDropdown.Item>
+                        <NavDropdown.Item><NavLink style={navStyle} to="/context">Context App</NavLink></NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
                 <Nav>
