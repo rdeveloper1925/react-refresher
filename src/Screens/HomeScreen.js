@@ -154,6 +154,13 @@ const FormikContent = () => (
     <br />
     It is packed with features including hussle free form validation, auto
     submission etc. I will build a small app using it to display shortly
+    <br />
+    <br />
+    <Button variant="success">
+      <Link to="/formik" style={{ textDecoration: "none", color: "white" }}>
+        Try the Formik Form
+      </Link>
+    </Button>
   </p>
 );
 

@@ -59,6 +59,11 @@ const CNav = (props) => {
                 Context App
               </NavLink>
             </NavDropdown.Item>
+            <NavDropdown.Item>
+              <NavLink style={navStyle} to="/formik">
+                Formik App
+              </NavLink>
+            </NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>

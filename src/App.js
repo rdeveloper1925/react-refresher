@@ -11,6 +11,7 @@ import SearcherScreen from "./Screens/SearcherScreen";
 import FakeProfileScreen from "./Screens/FakeProfileScreen";
 import TodoScreen from "./Screens/TodoScreen";
 import ContextScreen from "./Screens/ContextScreen";
+import FormikScreen from "./Screens/FormikScreen";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/todo" exact element={<TodoScreen />} />
         <Route path="/card/:user" exact element={<CardScreen />} />
         <Route path="/context" exact element={<ContextScreen />} />
+        <Route path="/formik" exact element={<FormikScreen />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Outlet />
