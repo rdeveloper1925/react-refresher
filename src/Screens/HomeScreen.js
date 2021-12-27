@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import routespic from "../Images/routes.png";
 import contextpic from "../Images/context.png";
+import ReducersScreen from "./ReducersScreen";
 
 const HomeScreen = (props) => {
   return (
@@ -66,6 +67,14 @@ const HomeScreen = (props) => {
           </Accordion.Header>
           <Accordion.Body>
             <StudentsContent />
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="7">
+          <Accordion.Header>
+            <h4 className="m-0">Context and Reducers</h4>
+          </Accordion.Header>
+          <Accordion.Body>
+            <ReducersContent />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -201,7 +210,8 @@ const StudentsContent = () => (
       So i finally found the perfect combo for using the context api with
       reducers. This will enable me completely eliminate state management
       libraries from my app at will. Recoil inclusive. Here is an app to go with
-      it.
+      it. Okay i just ended up practicing formik. Learnt a bunch of very
+      interesting things. Check out the app i built that goes with it.
       <br />
       <br />
     </p>
@@ -211,6 +221,26 @@ const StudentsContent = () => (
         to="/students-app"
       >
         View the student's app
+      </Link>
+    </Button>
+  </>
+);
+
+//Content: Reducers content
+const ReducersContent = () => (
+  <>
+    <p>
+      Okay now for real i am practicing with reducers combined with react
+      context
+      <br />
+      <br />
+    </p>
+    <Button variant="success" className="btn-md">
+      <Link
+        style={{ textDecoration: "none", color: "white" }}
+        to="/recepie-app"
+      >
+        View the Recepie app
       </Link>
     </Button>
   </>

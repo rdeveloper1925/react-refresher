@@ -13,6 +13,7 @@ import TodoScreen from "./Screens/TodoScreen";
 import ContextScreen from "./Screens/ContextScreen";
 import FormikScreen from "./Screens/FormikScreen";
 import StudentsScreen from "./Screens/StudentsScreen";
+import ReducersScreen from "./Screens/ReducersScreen";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/context" exact element={<ContextScreen />} />
         <Route path="/formik" exact element={<FormikScreen />} />
         <Route path="/students-app" exact element={<StudentsScreen />} />
+        <Route path="/recepie-app" exact element={<ReducersScreen />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Outlet />
