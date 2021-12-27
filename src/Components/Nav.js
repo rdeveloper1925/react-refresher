@@ -2,6 +2,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const CNav = (props) => {
+  //TODO: Refactor these to be more dynamic.
   return (
     <Navbar
       sticky="top"
@@ -62,6 +63,11 @@ const CNav = (props) => {
             <NavDropdown.Item>
               <NavLink style={navStyle} to="/formik">
                 Formik App
+              </NavLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <NavLink style={navStyle} to="/students-app">
+                Students App
               </NavLink>
             </NavDropdown.Item>
           </NavDropdown>

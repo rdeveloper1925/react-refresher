@@ -60,6 +60,14 @@ const HomeScreen = (props) => {
             <ContextContent />
           </Accordion.Body>
         </Accordion.Item>
+        <Accordion.Item eventKey="6">
+          <Accordion.Header>
+            <h4 className="m-0">React Context+Hooks</h4>
+          </Accordion.Header>
+          <Accordion.Body>
+            <StudentsContent />
+          </Accordion.Body>
+        </Accordion.Item>
       </Accordion>
     </Container>
   );
@@ -183,6 +191,28 @@ const ContextContent = () => (
       </Button>
     </p>
     <Image src={contextpic} style={{ borderRadius: "15px" }} />
+  </>
+);
+
+//Content: Students content
+const StudentsContent = () => (
+  <>
+    <p>
+      So i finally found the perfect combo for using the context api with
+      reducers. This will enable me completely eliminate state management
+      libraries from my app at will. Recoil inclusive. Here is an app to go with
+      it.
+      <br />
+      <br />
+    </p>
+    <Button variant="success" className="btn-md">
+      <Link
+        style={{ textDecoration: "none", color: "white" }}
+        to="/students-app"
+      >
+        View the student's app
+      </Link>
+    </Button>
   </>
 );
 
