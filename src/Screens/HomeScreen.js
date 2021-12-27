@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 import routespic from "../Images/routes.png";
 import contextpic from "../Images/context.png";
-import ReducersScreen from "./ReducersScreen";
 
 const HomeScreen = (props) => {
   return (
@@ -67,14 +66,6 @@ const HomeScreen = (props) => {
           </Accordion.Header>
           <Accordion.Body>
             <StudentsContent />
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="7">
-          <Accordion.Header>
-            <h4 className="m-0">Context and Reducers</h4>
-          </Accordion.Header>
-          <Accordion.Body>
-            <ReducersContent />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -152,12 +143,22 @@ const RecoilContent = () => (
   <p>
     Here i demonstrate how to perform crud operations with recoil. Why recoil
     you as, well its so much easier than redux. Here, try out my todo
-    application
+    application.
+    <br />
+    I have finally created the crud application i always wanted. I have used
+    recoil, and formik to create, read, update and delete all in a single
+    component. Take a look at my user management application.
     <br />
     <br />
-    <Button variant="primary">
+    <br />
+    <Button variant="primary" className="mx-3">
       <Link style={{ textDecoration: "none", color: "white" }} to="/todo">
         Todo App
+      </Link>
+    </Button>
+    <Button variant="success" className="mx-3">
+      <Link style={{ textDecoration: "none", color: "white" }} to="/users">
+        User App
       </Link>
     </Button>
   </p>
@@ -221,26 +222,6 @@ const StudentsContent = () => (
         to="/students-app"
       >
         View the student's app
-      </Link>
-    </Button>
-  </>
-);
-
-//Content: Reducers content
-const ReducersContent = () => (
-  <>
-    <p>
-      Okay now for real i am practicing with reducers combined with react
-      context
-      <br />
-      <br />
-    </p>
-    <Button variant="success" className="btn-md">
-      <Link
-        style={{ textDecoration: "none", color: "white" }}
-        to="/recepie-app"
-      >
-        View the Recepie app
       </Link>
     </Button>
   </>

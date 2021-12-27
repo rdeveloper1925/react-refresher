@@ -70,6 +70,11 @@ const CNav = (props) => {
                 Students App
               </NavLink>
             </NavDropdown.Item>
+            <NavDropdown.Item>
+              <NavLink style={navStyle} to="/users">
+                User Management App
+              </NavLink>
+            </NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
