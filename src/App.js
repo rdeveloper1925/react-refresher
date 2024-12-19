@@ -42,7 +42,7 @@ const PageNotFound = (props) => {
   const navigate = useNavigate();
   setTimeout(() => {
     navigate("/");
-  }, 5000);
+  }, 3000);
   return (
     <Container>
       <h1>Oops! sorry Could not find your page.</h1>
