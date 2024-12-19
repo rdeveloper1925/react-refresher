@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Ensure we don't rewrite requests to actual files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all traffic to the 'build' folder
+RewriteRule ^(.*)$ /build/$1 [L,QSA]
