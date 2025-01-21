@@ -1,5 +1,7 @@
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logo from "../Images/transparent-logo.png";
+import {Image} from 'react-bootstrap';
 
 const CNav = (props) => {
   //TODO: Refactor these to be more dynamic.
@@ -17,12 +19,13 @@ const CNav = (props) => {
           style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}
           to="/"
         >
-          React Refresher
+          <Image src={logo} className="logo" alt="transparent-logo" />
         </NavLink>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
+        {/**TODO - implement active for links */}
           <Nav.Link>
             <NavLink style={navStyle} to="/">
               Home
@@ -38,40 +41,45 @@ const CNav = (props) => {
               Contact
             </NavLink>
           </Nav.Link>
-          <NavDropdown title="Detailed Activities" id="collasible-nav-dropdown">
-            <NavDropdown.Item>
-              <NavLink style={navStyle} to="/searcher">
-                Searchers
+          <NavDropdown style={navStyle} title="Detailed Activities" id="collasible-nav-dropdown">
+            <NavDropdown.Item >
+              <NavLink style={detailedSyle} to="/searcher" >
+                Searcher
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink style={navStyle} to="/fake-profile">
+              <NavLink style={detailedSyle} to="/maps">
+                Maps
+              </NavLink>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <NavLink style={detailedSyle} to="/fake-profile">
                 Fake Profile api
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink style={navStyle} to="/todo">
+              <NavLink style={detailedSyle} to="/todo">
                 Todo App
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item>
-              <NavLink style={navStyle} to="/context">
+              <NavLink style={detailedSyle} to="/context">
                 Context App
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink style={navStyle} to="/formik">
+              <NavLink style={detailedSyle} to="/formik">
                 Formik App
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink style={navStyle} to="/students-app">
+              <NavLink style={detailedSyle} to="/students-app">
                 Students App
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink style={navStyle} to="/users">
+              <NavLink style={detailedSyle} to="/users">
                 User Management App
               </NavLink>
             </NavDropdown.Item>
@@ -90,7 +98,13 @@ const CNav = (props) => {
 
 const navStyle = {
   textDecoration: "none",
-  color: "gray",
+  color: "white",
+  fontWeight: "bold"
 };
+
+const detailedSyle = {
+  textDecoration: 'none',
+  color: 'black',
+}
 
 export default CNav;

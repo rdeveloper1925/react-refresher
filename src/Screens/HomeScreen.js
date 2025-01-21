@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import routespic from "../Images/routes.png";
 import contextpic from "../Images/context.png";
+import MapsScreen from "./MapsScreen";
 
 const HomeScreen = (props) => {
   return (
@@ -66,6 +67,14 @@ const HomeScreen = (props) => {
           </Accordion.Header>
           <Accordion.Body>
             <StudentsContent />
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="7">
+          <Accordion.Header>
+            <h4 className="m-0">React x Google maps</h4>
+          </Accordion.Header>
+          <Accordion.Body>
+            <MapsContent />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -226,5 +235,14 @@ const StudentsContent = () => (
     </Button>
   </>
 );
+
+//Content: Maps prelim content with instructions
+const MapsContent = () => (
+  <>
+    <p>
+      The following is how i have implemented google maps into this amazing app
+    </p>
+  </>
+)
 
 export default HomeScreen;

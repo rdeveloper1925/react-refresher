@@ -14,10 +14,12 @@ import ContextScreen from "./Screens/ContextScreen";
 import FormikScreen from "./Screens/FormikScreen";
 import StudentsScreen from "./Screens/StudentsScreen";
 import UsersScreen from "./Screens/UsersScreen";
+import MapsScreen from "./Screens/MapsScreen";
+import bgImage from "./Images/background.jpg";
 
 function App() {
   return (
-    <Col md="12" xs="12">
+    <Col md="12" xs="12" style={{backgroundImage: {bgImage}}}>
       <CNav />
       <Routes>
         <Route path="/" exact element={<HomeScreen />} />
@@ -31,6 +33,7 @@ function App() {
         <Route path="/formik" exact element={<FormikScreen />} />
         <Route path="/students-app" exact element={<StudentsScreen />} />
         <Route path="/users" exact element={<UsersScreen />} />
+        <Route path="/maps" exact element={<MapsScreen/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Outlet />
