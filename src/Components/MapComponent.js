@@ -1,16 +1,20 @@
 import React from "react";
-// import {
-//     MapContainer,
-//     TileLayer,
-//     Marker,
-//     Popup
-//   } from 'https://cdn.esm.sh/react-leaflet';
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import icons from '../Images/favicon.png';
 
 export default function MapComponent() {
 	const mapStyle = { height: "500px", width: "100%" };
 
 	const position = { lat: 43.653226, lng: -79.383184 };
+
+	//const icon = (<Icon iconUrl={icons} />)
+	var myIcon = window.L.icon({
+		iconUrl: icons,
+		iconSize: [38, 95],
+		iconAnchor: [22, 94],
+		popupAnchor: [-3, -76],
+		shadowAnchor: [22, 94]
+	});
 
 	return (
 		<MapContainer
@@ -23,7 +27,7 @@ export default function MapComponent() {
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 			/>
-			<Marker position={position}>
+			<Marker icon={myIcon} position={position}>
 				<Popup >
 					A pretty CSS3 popup. <br /> Easily customizable.
 				</Popup>
@@ -31,6 +35,7 @@ export default function MapComponent() {
 		</MapContainer>
 	);
 
+	// for google maps implementation if you ever come around to it
 	// return (
 	// 	<APIProvider apiKey={key}>
 	// 		<Map
