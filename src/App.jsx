@@ -1,20 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { Container, Col } from "react-bootstrap";
-import HomeScreen from "./Screens/HomeScreen";
-import AboutScreen from "./Screens/AboutScreen";
-import ContactScreen from "./Screens/ContactScreen";
+import HomeScreen from "./Screens/HomeScreen.jsx";
+import AboutScreen from "./Screens/AboutScreen.jsx";
+import ContactScreen from "./Screens/ContactScreen.jsx";
 import CNav from "./Components/Nav";
 import { Routes, Route, Outlet, useNavigate, Link } from "react-router-dom";
-import CardScreen from "./Screens/CardScreen";
-import SearcherScreen from "./Screens/SearcherScreen";
-import FakeProfileScreen from "./Screens/FakeProfileScreen";
-import TodoScreen from "./Screens/TodoScreen";
-import ContextScreen from "./Screens/ContextScreen";
-import FormikScreen from "./Screens/FormikScreen";
-import StudentsScreen from "./Screens/StudentsScreen";
-import UsersScreen from "./Screens/UsersScreen";
-import MapsScreen from "./Screens/MapsScreen";
+import CardScreen from "./Screens/CardScreen.jsx";
+import SearcherScreen from "./Screens/SearcherScreen.jsx";
+import FakeProfileScreen from "./Screens/FakeProfileScreen.jsx";
+import TodoScreen from "./Screens/TodoScreen.jsx";
+import ContextScreen from "./Screens/ContextScreen.jsx";
+import FormikScreen from "./Screens/FormikScreen.jsx";
+import StudentsScreen from "./Screens/StudentsScreen.jsx";
+import UsersScreen from "./Screens/UsersScreen.jsx";
+import MapsScreen from "./Screens/MapsScreen.jsx";
 import bgImage from "./Images/background.jpg";
 
 function App() {

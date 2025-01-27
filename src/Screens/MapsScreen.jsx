@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import MapComponent from "../Components/MapComponent";
+import MapComponent from "../Components/MapComponent.jsx";
 
 export default function MapsScreen (){
     useEffect(()=>{
-        console.log(process.env.REACT_APP_TESTING);
+        console.log("yeys");
     },[]);
     return(
         <div className="container">
